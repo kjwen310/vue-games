@@ -27,7 +27,7 @@
           </router-link>
         </li>
       </ul>
-      <div class="complete mt-5">
+      <div v-if="isGetOne && isGetTwo && isGetThree" class="complete mt-5">
         <a href="#" @click.prevent="$router.push({ name: 'Complete' })">完成任務</a>
       </div>
     </section>
