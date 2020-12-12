@@ -1,0 +1,23 @@
+.tile {
+  @include flex-center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/gametwo/rock-texture.jpg');
+  font-size: 2rem;
+  color: $card-text-color;
+  border-radius: $border-round * 2;
+  z-index: $z-5;
+  cursor: pointer;
+  @include sm-width {
+    font-size: 1.2rem;
+  }
+}
+.tile.space {
+  background-color: $text-color;
+  cursor: auto;
+}
+
+.shuffle-tile-move {
+  transition: 0.5s ease;
+}

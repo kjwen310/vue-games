@@ -1,0 +1,63 @@
+.desc-wrap {
+  @include flex-center;
+  @include absolute-box;
+  top: 0;
+  left: 0;
+  z-index: $z-7;
+  background-color: $desc-bg-color;
+  .desc-card {
+    @include flex-column-center;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: $text-color;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    animation: openDesc1 1s cubic-bezier(0.67, 0.02, 0, 1.13) alternate forwards;
+    cursor: pointer;
+    @include iphoneSE {
+      width: 82%;
+      font-size: 1.2rem;
+      animation: openDesc3 1s cubic-bezier(0.67, 0.02, 0, 1.13) alternate forwards;
+    }
+    .desc-img {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 260px;
+      height: 200px;
+      top: -60px;
+      left: 0;
+      background-color: $white-bg-color;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      z-index: $z-8;
+      @include iphoneSE {
+        width: 80%;
+        height: 160px;
+      }
+      img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: $border-round;
+      }
+    }
+    .desc-content {
+      position: absolute;
+      top: 120px;
+      padding: 1rem 1rem;
+      text-align: center;
+      color: $dark-night-color;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+      visibility: hidden;
+      animation: openDesc2 1s cubic-bezier(0.67, 0.02, 0, 1.13) alternate forwards;
+      @include iphoneSE {
+        animation: openDesc4 1s cubic-bezier(0.67, 0.02, 0, 1.13) alternate forwards;
+      }
+      .btn-group {
+        @include flex-center;
+      }
+    }
+  }
+}

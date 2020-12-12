@@ -1,0 +1,45 @@
+.counter {
+  width: 10rem;
+  font-size: 3rem;
+  color: $text-color;
+  @include ipad {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  @include iphone6 {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+  .counter-area {
+    line-height: 6rem;
+    text-align: center;
+    background-color: $light-bg-color;
+    border-radius: $border-round;
+    @include ipad {
+      line-height: 3rem;
+      padding: 0;
+      margin-top: 0;
+      width: 6rem;
+      border-radius: $border-round;
+    }
+    @include iphone6 {
+      line-height: 1.8rem;
+      width: 4rem;
+    }
+  }
+  span {
+    font-size: 1rem;
+    margin-left: 1rem;
+    @include ipad {
+      font-size: 0.8rem;
+      margin-left: 0.2rem;
+    }
+    @include iphone6 {
+      font-size: 0.6rem;
+    }
+  }
+}

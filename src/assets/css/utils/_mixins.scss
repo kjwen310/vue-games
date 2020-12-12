@@ -1,0 +1,87 @@
+// position-box
+@mixin relative-box {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+  
+@mixin absolute-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+  
+@mixin sudo-box {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+  
+// center
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin transform-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// grid
+@mixin grid($repeat, $w-col, $w-row, $w-gap) {
+  display: grid;
+  grid-template-columns: repeat($repeat, $w-col);
+  grid-template-rows: repeat($repeat, $w-row);
+  grid-column-gap: $w-gap;
+  grid-row-gap: $w-gap;
+}
+
+// background-image
+@mixin bg-img($url, $pos) {
+  background: url($url);
+  background-position: $pos;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+@mixin fog-img($url, $duration) {
+  background: url($url);
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: contain;
+  transition: ease-in-out;
+  animation: foggy $duration linear infinite;
+}
+
+// neon-runner
+@mixin neon($w, $h, $deg, $name, $t:null, $b:null ,$l:null, $r:null, $delay:null) {
+  top: $t;
+  bottom: $b;
+  left: $l;
+  right: $r;
+  width: $w;
+  height: $h;
+  background: linear-gradient($deg, transparent, $light-neon-color);
+  animation: $name 1s linear infinite;
+  animation-delay: $delay;
+}
+
+// circle
+@mixin circle($diameter, $circle-color) {
+  width: $diameter;
+  height: $diameter;
+  line-height: $diameter;
+  border-radius: 50%;
+  background: $circle-color;
+}

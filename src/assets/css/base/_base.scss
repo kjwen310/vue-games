@@ -1,0 +1,56 @@
+// display
+.d-flex { display: flex }
+.d-block { display: block }
+.d-inline-block { display: inline-block }
+
+// container
+.container {
+  @include relative-box;
+  overflow: hidden;
+}
+
+.flex-container {
+  @include flex-center;
+  overflow: hidden;
+  @include ipad {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
+.fixed-container {
+  @include relative-box;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.fixed-flex-container {
+  @include relative-box;
+  @include flex-center;
+  background: linear-gradient(#0d0015, #17184b);
+  background-attachment: fixed;
+  overflow: hidden;
+  @include ipad {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
+// bg-img
+.bg-img {
+  @include absolute-box;
+  @include bg-img('../images/forest/forest-2.png', 50%);
+  z-index: $z-3;
+  @include ipad-pro {
+    width: 130%;
+    height: 130%;
+  }
+  @include sm-width {
+    width: 160%;
+    height: 160%;
+  }
+  @include iphoneSE {
+    width: 140%;
+    height: 140%;
+  }
+}

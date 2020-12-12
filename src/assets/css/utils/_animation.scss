@@ -1,0 +1,79 @@
+// fog
+@keyframes foggy {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-200vw, 0, 0);
+    opacity: 0;
+  }
+}
+
+// desc open
+@keyframes openDesc1 {
+  100% {
+    height: 410px;
+  }
+}
+@keyframes openDesc2 {
+  100% {
+    visibility: visible;
+    opacity: 1;
+    top: 150px;
+  }
+}
+@keyframes openDesc3 {
+  100% {
+    height: 380px;
+  }
+}
+@keyframes openDesc4 {
+  100% {
+    visibility: visible;
+    opacity: 1;
+    top: 108px;
+  }
+}
+
+// star and fire
+@keyframes starNight {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+// neon
+@keyframes neon1 {
+  0% { left: -100% }
+  50%, 100% { left: 100% }
+}
+@keyframes neon2 {
+  0% { top: -100% }
+  50%, 100% { top: 100% }
+}
+@keyframes neon3 {
+  0% { right: -100% }
+  50%, 100% { right: 100% }
+}
+@keyframes neon4 {
+  0% { bottom: -100% }
+  50%, 100% { bottom: 100% }
+}

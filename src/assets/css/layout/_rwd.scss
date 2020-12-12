@@ -1,0 +1,36 @@
+// rwd
+@mixin ipad-pro {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin ipad {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin sm-width {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin iphone6-plus {
+  @media (max-width: 414px) {
+    @content;
+  }
+}
+@mixin iphone6 {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+@mixin iphoneSE {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+@mixin galaxy-fold {
+  @media (max-width: 280px) {
+    @content;
+  }
+}

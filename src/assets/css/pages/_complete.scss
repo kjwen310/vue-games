@@ -1,0 +1,103 @@
+.layer-1 {
+  position: absolute;
+  left: -9.5rem;
+  width: 130%;
+  object-fit: cover;
+  bottom: -30rem;
+  @include ipad-pro {
+    bottom: -22rem;
+  }
+  @include ipad {
+    width: 140%;
+    bottom: -18rem;
+  }
+  @include sm-width {
+    left: -6rem;
+    bottom: -13rem;
+  }
+  @include iphone6-plus {
+    width: 150%;
+    bottom: -10rem;
+  }
+  @include galaxy-fold {
+    width: 180%;
+    left: -6rem;
+    bottom: -6.5rem;
+  }
+}
+.layer-2 {
+  position: absolute;
+  left: -10rem;
+  bottom: -22rem;
+  width: 130%;
+  object-fit: cover;
+  @include ipad-pro { left: -8rem }
+  @include ipad { left: -6rem }
+  @include iphone6-plus { left: -3rem }
+}
+.img1 { z-index: $z-5 }
+.img2 { z-index: $z-4 }
+.img3 { z-index: $z-3 }
+.img4 {
+  bottom: -22rem;
+  z-index: $z-5;
+  @include ipad-pro { bottom: -18rem }
+  @include ipad { bottom: -14rem }
+  @include iphone6-plus { bottom: -7rem }
+  @include iphoneSE { bottom: -4rem }
+}
+.img5 {
+  bottom: -25rem;
+  z-index: $z-4;
+  @include ipad-pro { bottom: -20rem }
+  @include ipad { bottom: -15rem }
+  @include iphone6-plus { bottom: -8rem }
+  @include iphoneSE { bottom: -4rem }
+}
+.img6 {
+  bottom: -30rem;
+  z-index: $z-3;
+  opacity: 0.1;
+  @include ipad-pro { bottom: -24rem }
+  @include ipad { bottom: -22rem }
+  @include iphone6-plus { bottom: -8rem }
+  @include iphoneSE { bottom: -4rem }
+}
+
+.complete-btn-group {
+  @include flex-center;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  transform: translate(-5%, -5%);
+  z-index: $z-6;
+  background-color: $light-bg-color;
+  border-radius: $border-round;
+  @include sm-width {
+    padding: 0.5rem;
+  }
+  @include iphone6-plus {
+    padding: 0.5rem;
+    right: 2%;
+    bottom: 2%;
+  }
+  @include iphoneSE {
+    padding: 0.4rem;
+  }
+  button {
+    background: transparent;
+    font-size: 2.5rem;
+    @include ipad-pro {
+      color: $primary-color;
+    }
+    @include sm-width {
+      font-size: 1.5rem;
+    }
+    @include iphoneSE {
+      padding: 1rem;
+    }
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

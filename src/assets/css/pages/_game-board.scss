@@ -1,0 +1,27 @@
+.gameboard-bg-image {
+  top: 0;
+  right: 10%;
+  transform: scale(1.7);
+  @include sm-width {
+    right: 30%;
+  }
+  @include iphone6-plus {
+    right: 40%;
+    transform: scale(2);
+  }
+}
+
+.gameboard {
+  width: 100%;
+  margin: 0 auto;
+  z-index: $z-5;
+  @include ipad {
+    width: 60%;
+  }
+  @include iphone6-plus {
+    width: 80%;
+  }
+  @include galaxy-fold {
+    width: 88%;
+  }
+}

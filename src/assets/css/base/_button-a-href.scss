@@ -1,0 +1,20 @@
+// button
+button {
+  width: 6rem;
+  padding: 0.5rem;
+  background-color: $primary-color;
+  font-size: 1.2rem;
+  color: $text-color;
+  border-radius: $border-round;
+  cursor: pointer;
+  &:hover {
+    background-color: $btn-hover-color;
+  }
+}
+
+// a
+a {
+  color: $text-color;
+  font-size: 1.5rem;
+  text-decoration: none;
+}

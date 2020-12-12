@@ -1,0 +1,85 @@
+.gameone-board {
+  @include grid(4, 6.2rem, 8.2rem, 0.5rem);
+  @include ipad {
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: repeat(4, 8rem);
+  }
+  @include sm-width {
+    grid-template-columns: repeat(4, 4.5rem);
+    grid-template-rows: repeat(4, 6rem);
+  }
+  @include iphone6 {
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: repeat(4, 5.4rem);
+  }
+  @include iphoneSE {
+    grid-template-columns: repeat(4, 3rem);
+    grid-template-rows: repeat(4, 4.5rem);
+  }
+  .card {
+    position: relative;
+    transition: transform $tr-2 ease-in;
+    transform-style: preserve-3d;
+    z-index: $z-5;
+    cursor: pointer;
+    .card-face {
+      @include flex-center;
+      @include absolute-box;
+      border-radius: $border-round;
+      backface-visibility: hidden;
+    }
+    .is-front {
+      background-color: $text-color;
+      transform: rotateY(180deg);
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border: 3px solid $card-color;
+        border-radius: $border-round;
+      }
+      .front-img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+      .check-mark {
+        position: absolute;
+        right: 0.3rem;
+        bottom: 0.3rem;
+        max-width: 1rem;
+      }
+    }
+    .is-back {
+      position: relative;
+      background-color: $card-color;
+      font-size: 3rem;
+      color: $card-text-color;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        bottom: 3px;
+        left: 3px;
+        right: 3px;
+        border: 2px solid $card-text-color;
+        border-radius: $border-round;
+      }
+      @include sm-width {
+        font-size: 2rem;
+      }
+      @include iphone6 {
+        font-size: 1rem;
+      }
+    }
+  }
+  .isflipped {
+    transform: rotateY(180deg);
+  }
+}
+
+.shuffle-card-move {
+  transition: transform 0.5s ease-in-out;
+}

@@ -1,0 +1,12 @@
+.fog-img {
+  position: absolute;
+  width: 300vw;
+  height: 100vh;
+  z-index: $z-1;
+}
+.fog-img-first {
+  @include fog-img('../images/fog/fog-1.png', 29s);
+}
+.fog-img-second {
+  @include fog-img('../images/fog/fog-2.png', 49s);
+}

@@ -1,0 +1,46 @@
+// color
+$primary-color: #f8b862;
+$text-color: #fff;
+$card-color: #ba2636;
+$card-text-color: #432f2f;
+$btn-hover-color: #f39800;
+$light-neon-color:  #fcf300;
+$dark-neon-color:  #f5d300;
+$light-night-color:  #17184b;
+$dark-night-color:  #0d0015;
+
+// background-color
+$bg-color: rgba(247, 236, 236, 0.4);
+$light-bg-color: rgba(201, 205, 248, 0.3);
+$btn-hover-bg-color: rgba(201, 205, 248, 0.6);
+$white-bg-color:  rgba(255, 255, 255, 0.9);
+$desc-bg-color:  rgba(88, 84, 84, 0.7);
+$dark-bg-color: #404446;
+$trans-bg-color: rgba(192, 212, 241, 0.1);
+
+// gradient
+$night-gradient: linear-gradient($dark-night-color, $light-night-color);
+
+// border
+$dark-border: 4px solid $light-night-color;
+$card-border: 2px solid $card-color;
+
+// border-radius
+$border-round: 4px;
+$border-circle: 50%;
+
+// transition
+$tr-1: 0.3s;
+$tr-2: 0.5s;
+$tr-3: 0.8s;
+$tr-4: 1s;
+
+// z-index
+$z-1: -1;
+$z-2: 0;
+$z-3: 100;
+$z-4: 110;
+$z-5: 120;
+$z-6: 130;
+$z-7: 140;
+$z-8: 150;

@@ -1,0 +1,16 @@
+.stars {
+  position: absolute;
+  background: $text-color;
+  border-radius: $border-circle;
+  z-index: $z-2;
+  animation: starNight linear infinite;
+}
+
+.fire-stars {
+  position: absolute;
+  background: $text-color;
+  border-radius: $border-circle;
+  box-shadow:0 0 5px 3px rgba(250, 221, 164, 0.8);
+  animation: starNight linear infinite;
+  z-index: $z-4;
+}

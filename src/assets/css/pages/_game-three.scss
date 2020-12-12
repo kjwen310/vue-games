@@ -1,0 +1,31 @@
+canvas {
+  border: $dark-border;
+}
+.snake-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 3rem;
+  width: 90%;
+  color: $primary-color;
+  background: $trans-bg-color;
+  border-radius: $border-round;
+  @include ipad {
+    font-size: 3rem;
+    margin-top: 1rem;
+    padding: 0.5rem 0.2rem;
+  }
+  .quit-square {
+    @include flex-center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: orange;
+    border-radius: $border-circle;
+    font-size: 1rem;
+    color: $text-color;
+    &:hover {
+      background-color: $btn-hover-color;
+    }
+  }
+}
