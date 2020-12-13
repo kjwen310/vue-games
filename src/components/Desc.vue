@@ -57,7 +57,7 @@
           <div class="desc-content py-2 px-2">
             <h2>發生錯誤</h2>
             <p class="mt-3">
-              由於頁面重整，將回到首頁並重新遊戲。
+              由於頁面重整，請點選下方按鈕回到主頁再重新遊戲。
             </p>
             <button type="button" class="m-auto mt-5" @click="errReplay">回主頁</button>
           </div>

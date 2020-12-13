@@ -23,6 +23,7 @@ export default {
   components: { Desc },
   setup() {
     const store = useStore();
+    const innerWidth = computed(() => store.state.innerWidth);
     const mode = computed(() => store.state.mode);
 
     onMounted(() => {
@@ -32,6 +33,7 @@ export default {
     });
 
     return {
+      innerWidth,
       mode,
     };
   },

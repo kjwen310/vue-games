@@ -64,19 +64,6 @@
   animation: foggy $duration linear infinite;
 }
 
-// neon-runner
-@mixin neon($w, $h, $deg, $name, $t:null, $b:null ,$l:null, $r:null, $delay:null) {
-  top: $t;
-  bottom: $b;
-  left: $l;
-  right: $r;
-  width: $w;
-  height: $h;
-  background: linear-gradient($deg, transparent, $light-neon-color);
-  animation: $name 1s linear infinite;
-  animation-delay: $delay;
-}
-
 // circle
 @mixin circle($diameter, $circle-color) {
   width: $diameter;
