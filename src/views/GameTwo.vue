@@ -57,15 +57,15 @@ export default {
     const gridStyle = computed(() => {
       let size = 0;
       if (innerWidth.value >= 576) {
-        size = 6;
+        size = 8;
       } else if (innerWidth.value >= 414) {
-        size = 5;
+        size = 5.2;
       } else if (innerWidth.value >= 360) {
-        size = 4;
+        size = 4.5;
       } else if (innerWidth.value >= 320) {
-        size = 3.5;
+        size = 4;
       } else {
-        size = 3;
+        size = 3.5;
       }
       const style = `repeat(${col.value}, ${size}rem)`;
       return style;
@@ -198,7 +198,7 @@ export default {
     display: grid;
     grid-template-columns: var(--gridStyle);
     grid-template-rows: var(--gridStyle);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+    grid-column-gap: 0.3rem;
+    grid-row-gap: 0.3rem;
   }
 </style>

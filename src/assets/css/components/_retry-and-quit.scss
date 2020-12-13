@@ -4,7 +4,7 @@
   @include ipad {
     width: 100%;
     margin-left: 0;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
   @include iphone6 {
     margin-top: 1rem;
@@ -21,14 +21,11 @@
     @include ipad {
       display: block;
       line-height: 3rem;
-      font-size: 1.5rem;
-      padding: 0;
-      margin-bottom: 1rem;
+      padding: 0.5rem;
     }
     @include iphone6 {
       line-height: 1.8rem;
       font-size: 1rem;
-      margin-bottom: 0.6rem;
     }
     &:hover {
       background-color: $btn-hover-bg-color;
@@ -44,11 +41,9 @@
     @include ipad {
       display: block;
       line-height: 3rem;
-      font-size: 1.5rem;
     }
     @include iphone6 {
       line-height: 1.8rem;
-      font-size: 1rem;
     }
   }
 }

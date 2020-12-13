@@ -2,26 +2,34 @@
   <div class="flex-container">
     <Counter />
     <canvas id="canvas" :width="width" :height="width"></canvas>
-
-    <section v-if="innerWidth < 996" class="snake-control px-2 mt-3">
-      <div class="mr-3" @click="pressDown(37)">
-        <i class="fas fa-caret-left"></i>
-      </div>
-      <div class="mr-3" @click="pressDown(38)">
-        <i class="fas fa-caret-up"></i>
-      </div>
-      <div class="quit-square mr-3" @click="$router.push({ name: 'Start' })">
-        <i class="far fa-times-circle"></i>
-      </div>
-      <div class="mr-3" @click="pressDown(40)">
-          <i class="fas fa-caret-down"></i>
+    <RetryAndQuit v-if="innerWidth > 768" @restart-game="init" />
+  </div>
+  <div class="flex-container">
+    <section v-if="innerWidth <= 1024" class="snake-control px-2 mt-4">
+      <div class="control-template">
+        <div class="control-btn mr-2" @click="pressDown(37)">
+          <i class="fas fa-angle-left"></i>
         </div>
-      <div @click="pressDown(39)">
-        <i class="fas fa-caret-right"></i>
+        <div class="up-down mr-2">
+          <div class="control-btn" @click="pressDown(38)">
+            <i class="fas fa-angle-up"></i>
+          </div>
+          <div class="control-btn mt-2" @click="pressDown(40)">
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </div>
+        <div class="control-btn" @click="pressDown(39)">
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </div>
+      <div
+        v-if="innerWidth <= 768"
+        class="gamethree-quit d-block mt-2"
+        @click="$router.push({ name: 'Start' })"
+      >
+        <i class="far fa-times-circle"></i> 退出
       </div>
     </section>
-
-    <RetryAndQuit v-if="innerWidth >= 996" @restart-game="init" />
   </div>
   <Desc @start-game="init(), stopControl(), beginControl()"/>
 </template>

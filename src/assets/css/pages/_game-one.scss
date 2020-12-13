@@ -1,20 +1,16 @@
 .gameone-board {
   @include grid(4, 6.2rem, 8.2rem, 0.5rem);
   @include ipad {
-    grid-template-columns: repeat(4, 6rem);
-    grid-template-rows: repeat(4, 8rem);
+    @include grid(4, 6rem, 8rem, 0.5rem);
   }
   @include sm-width {
-    grid-template-columns: repeat(4, 4.5rem);
-    grid-template-rows: repeat(4, 6rem);
+    @include grid(4, 5rem, 6.5rem, 0.5rem);
   }
   @include iphone6 {
-    grid-template-columns: repeat(4, 4rem);
-    grid-template-rows: repeat(4, 5.4rem);
+    @include grid(4, 4.5rem, 6rem, 0.3rem);
   }
   @include iphoneSE {
-    grid-template-columns: repeat(4, 3rem);
-    grid-template-rows: repeat(4, 4.5rem);
+    @include grid(4, 3.5rem, 4.8rem, 0.3rem);
   }
   .card {
     position: relative;

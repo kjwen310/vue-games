@@ -2,30 +2,54 @@ canvas {
   border: $dark-border;
 }
 .snake-control {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  font-size: 3rem;
-  width: 90%;
-  color: $primary-color;
-  background: $trans-bg-color;
-  border-radius: $border-round;
+  margin-top: 1rem;
+  color: $text-color;
+  @include ipad-pro {
+    width: 40%;
+    font-size: 4rem;
+    padding: 1rem 0.5rem;
+  }
   @include ipad {
+    width: 90%;
     font-size: 3rem;
-    margin-top: 1rem;
     padding: 0.5rem 0.2rem;
   }
-  .quit-square {
-    @include flex-center;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: orange;
-    border-radius: $border-circle;
-    font-size: 1rem;
-    color: $text-color;
-    &:hover {
-      background-color: $btn-hover-color;
+  @include sm-width {
+    font-size: 2.5rem;
+  }
+  .control-template {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: $trans-bg-color;
+    border-radius: $border-round;
+    padding: 1rem;
+    .control-btn {
+      width: 5rem;
+      background: $primary-color;
+      border-radius: $border-round;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .up-down {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .gamethree-quit {
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: $light-bg-color;
+    border-radius: $border-round;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    @include iphone6 {
+      line-height: 1.8rem;
+      font-size: 1rem;
     }
   }
 }
