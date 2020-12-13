@@ -27,7 +27,7 @@
 .fixed-flex-container {
   @include relative-box;
   @include flex-center;
-  background: linear-gradient(#0d0015, #17184b);
+  background: $night-gradient;
   background-attachment: fixed;
   overflow: hidden;
   @include ipad {

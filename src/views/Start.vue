@@ -3,7 +3,7 @@
   <div class="fixed-flex-container">
 
     <section class="bg-img start-bg-img">
-      <div class="container">
+      <div v-if="innerWidth >= 768" class="container">
         <div class="fog-img fog-img-first"></div>
         <div class="fog-img fog-img-second"></div>
       </div>
@@ -72,9 +72,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-  .fixed-flex-container {
-    background: linear-gradient(#0d0015, #17184b);
-  }
-</style>

@@ -44,7 +44,7 @@
   @include ipad-pro { bottom: -18rem }
   @include ipad { bottom: -14rem }
   @include iphone6-plus { bottom: -7rem }
-  @include iphoneSE { bottom: -4rem }
+  @include iphoneSE { bottom: -5.2rem }
 }
 .img5 {
   bottom: -25rem;
@@ -92,9 +92,11 @@
     }
     @include sm-width {
       font-size: 1.5rem;
+      width: 3rem;
     }
     @include iphoneSE {
-      padding: 1rem;
+      padding: 0.5rem;
+      width: 2.5rem;
     }
     &:hover {
       color: $primary-color;

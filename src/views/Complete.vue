@@ -5,7 +5,7 @@
     <Fire />
     <ImgControl />
     <div class="complete-btn-group p-3">
-      <button type="button">
+      <button type="button" @click="goGitHub">
         <i class="fab fa-github"></i>
       </button>
       <button type="button" @click="rePlay">
@@ -42,6 +42,10 @@ export default {
       store.dispatch('parallax', e);
     };
 
+    const goGitHub = () => {
+      window.location.href = 'https://github.com/kjwen310/vue-games';
+    };
+
     const rePlay = () => {
       store.dispatch('resetIsGet');
       router.push({ name: 'Start' });
@@ -55,6 +59,7 @@ export default {
 
     return {
       gradient,
+      goGitHub,
       rePlay,
     };
   },
