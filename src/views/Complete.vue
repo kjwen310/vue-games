@@ -53,8 +53,12 @@ export default {
 
     onMounted(() => {
       document.addEventListener('mousemove', parallax);
-      gradient.value = mode.value === 'easy' ? '#0d0015, #507ea4' : '#111425, #f5e9a6';
-      store.dispatch('Desc/setIsShowFinal');
+      if (mode.value && mode.value !== '') {
+        gradient.value = mode.value === 'easy' ? '#0d0015, #507ea4' : '#111425, #f5e9a6';
+        store.dispatch('Desc/setIsShowFinal');
+      } else {
+        store.dispatch('Desc/setIsShowErr');
+      }
     });
 
     return {
